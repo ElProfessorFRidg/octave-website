@@ -1,0 +1,365 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    background-color: #e60000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.banniere {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.banniere-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Navigation et sommaire */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+#sommaire {
+    color: white;
+    padding: 10px;
+}
+
+#sommaire h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e60000;
+    padding-bottom: 5px;
+}
+
+#sommaire ul {
+    list-style-type: none;
+}
+
+#sommaire ul li {
+    margin-bottom: 5px;
+}
+
+#sommaire ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+#sommaire ul li a:hover {
+    background-color: #e60000;
+    border-radius: 3px;
+}
+
+/* Contenu principal */
+main {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+h1, h2, h3 {
+    color: #e60000;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Images */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-principale {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #e60000;
+    border-radius: 5px;
+}
+
+/* Sections spécifiques */
+section {
+    margin-bottom: 30px;
+}
+
+.actualites {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.actualites article {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #e60000;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #e60000;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Listes */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.liens-externes {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.liens-externes li {
+    margin-bottom: 10px;
+}
+
+.liens-externes a {
+    color: #e60000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.liens-externes a:hover {
+    border-bottom: 1px solid #e60000;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #e60000;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+footer a:hover {
+    background-color: #b30000;
+}
+
+/* Page équipe */
+.joueur {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.joueur-photo {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.joueur-photo img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.joueur-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Page histoire */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #e60000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid #e60000;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f9f9f9;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f9f9f9;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #f9f9f9;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f9f9f9 transparent transparent;
+}
+
+.right::after {
+    left: -13px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .actualites {
+        flex-direction: column;
+    }
+    
+    .joueur {
+        flex-direction: column;
+    }
+    
+    .joueur-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Timeline responsive */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .container::before {
+        left: 60px;
+        border: medium solid #f9f9f9;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f9f9f9 transparent transparent;
+    }
+    
+    .left::after, .right::after {
+        left: 18px;
+    }
+    
+    .right {
+        left: 0%;
+    }
+}
